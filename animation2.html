@@ -1,0 +1,279 @@
+<html>
+    <head>
+       <style>
+        body{
+            margin:0px;
+            height: 100vh;
+            background-color: red;
+            display: flex; 
+            left: 10px;           
+            align-items: center;
+            justify-content: center;
+            animation: bg 15s infinite alternate ease-in-out ;
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .continer{
+            width: 300px;
+            height: 300px;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            height: 200px;
+            width: 300px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            top: 0;
+            left: 10px;
+            /* bottom: 100vh; */
+            position: absolute;
+            /* transform: translate(); */
+            animation: rotatemove 15s  infinite alternate  ease-in-out;
+        }
+        .triangle
+        {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid black;
+            position: relative;
+            /* position: absolute; */
+
+        }
+        .rectangle
+        {
+
+            width: 100px;
+            height: 150px;
+            position: relative;
+            background-color: brown;
+            /* top: ; */
+        
+
+        }
+        .diamond{
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            transform: rotate(45deg);
+            position: absolute;
+            /* top: 10px; */
+            top: 10px;
+            animation: stars 15s infinite alternate ease-in-out;
+        }
+        .cloud
+        {
+            height: 160px;
+            width: 80px;
+            background-color: azure;
+            left: 200px;
+            top: -150px;
+            border-radius: 50px;
+            position: relative;
+            transform: rotate(-90deg);
+            animation:cloudanimation 15s infinite alternate ease-in-out;
+        }
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+        .cloud::before
+        {
+           width: 30px;
+           height: 80px;
+           top: -40px;
+           left: 20px;
+        }
+        .cloud::after
+        {
+           width: 50px;
+           height: 80px;
+           /* top: -40px; */
+           left: 40px;
+           bottom: 40px;
+           
+        }
+        @keyframes cloudanimation {
+            0%
+            {
+                background-color: white;
+            }
+            50%
+            {
+                background-color: cornflowerblue;
+            }
+            100%
+            {
+                background-color: gray;
+            }
+            
+        }
+        .text
+        {
+            font: 10px;
+            size: 80cm;
+            color: aqua;
+            position: absolute;
+            top: 10px;
+            animation: movetext 15s infinite alternate ;
+        }
+        @keyframes movetext {
+            0%
+            {
+                transform: translateX(-100%);
+            }
+            100%
+            {
+                transform: translateX(100%);
+            }
+
+            
+        }
+        @keyframes rotatemove {
+            0%
+            {
+            transform :translateY(0);
+            background-color: red;
+
+            
+            }
+            50%
+            {
+                transform: translateY(50%);
+                background-color: orange;
+            }
+            100%
+            {
+                transform: translateY(100%);
+                background-color: gainsboro;
+            }
+
+
+            
+        }
+        @keyframes bg {
+            0%
+            {
+                background-color: orange;
+            }
+            50%
+            {
+                background-color: skyblue;
+            }
+            100%
+            {
+                background-color: black;
+            }
+            
+        }
+        @keyframes stars {
+            0%
+            {
+                background-color: orange;
+            }
+            50%
+            {
+                background-color: cornflowerblue;
+            }
+            100%
+            {
+                background-color: whitesmoke;
+            }
+            
+        }
+       </style>
+       </head>
+       <body>
+        <div class="cloud"></div>
+        
+        <!-- <div class="diamond"></div> -->
+        <div class="cloud"></div>
+        <div class="container">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="triangle"></div>
+        <div class="rectangle"></div>
+      
+        <div class="circle"></div>
+        <div class="diamond"></div>
+        <div class="text">day and night</div>
+      
+        </div>
+        <div class="continer">
+        <div class="cloud"></div>
+           
+        <div class="diamond"></div>
+        
+       
+        </div>
+        <div class="container">
+            <div class="triangle"></div>
+            <div class="rectangle"></div>
+            <div class="diamond"></div>
+            
+        </div>
+       
+
+    </body>
+</html>
+<!-- <html>
+<head>
+   <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: orange; /* Initial background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bg 2s infinite alternate ease-in-out;
+        }
+
+        .circle {
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            position: absolute;
+            top: 0; /* Starts from the top */
+            animation: moveDown 2s infinite alternate ease-in-out;
+        }
+
+        /* Animation to move the circle from top to bottom */
+        @keyframes moveDown {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh - 200px); /* Moves to bottom */
+            }
+        }
+
+        /* Background animation */
+        @keyframes bg {
+            0% {
+                background-color: orange;
+            }
+            100% {
+                background-color: black;
+            }
+        }
+   </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html> -->
